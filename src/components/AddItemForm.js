@@ -11,7 +11,7 @@ class AddItemForm extends React.Component {
   ruleCountRef = React.createRef();
   rulePriceRef = React.createRef();
 
-  createItem = (e) => {
+  createRuleItem = (e) => {
     e.preventDefault();
 
     const item = {
@@ -23,8 +23,7 @@ class AddItemForm extends React.Component {
       }
     };
 
-    this.props.addItem(item);
-    console.log(typeof item.rule.ruleCount);
+    this.props.addRuleItem(item);
     e.currentTarget.reset();
   }
 
@@ -32,16 +31,16 @@ class AddItemForm extends React.Component {
 
     return (
       <div className="pricing-rules">
-        <form onSubmit={this.createItem}> 
-          <div className="pricing-list">
+        <form onSubmit={this.createRuleItem}> 
+          <div className="pricing-form">
             <label htmlFor="name">Item Name</label>
-            <input name="name" ref={this.nameRef} type="text" />
+            <input name="name" ref={this.nameRef} type="text" required />
           </div>
-          <div className="pricing-list">
+          <div className="pricing-form">
             <label htmlFor="price">Item Price</label>
-            <input name="price" ref={this.priceRef} type="number" />
+            <input name="price" ref={this.priceRef} type="number" required />
           </div>
-          <div className="pricing-list">
+          <div className="pricing-form">
             <label htmlFor="rule">Item Rule</label>
             <input name="rule-count" ref={this.ruleCountRef} placeholder="Item count" type="number" />
             <input name="rule-price" ref={this.rulePriceRef} placeholder="Discount price" type="number" />

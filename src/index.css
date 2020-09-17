@@ -12,10 +12,54 @@ code {
     monospace;
 }
 
-.pricing-list {
+h1 {
+  text-align: center;
+  padding-bottom: 2em;
+}
+.pricing-list{
+  padding-right: 4em;
+}
+.column-heads {
+  font-weight: bold;
+}
+.pricing-list > li {
+  display: flex;
+}
+.pricing-list > li p {
+ width: 8em;
+}
+.pricing-rules form {
+  margin-top: 4em;
+}
+
+.pricing-form {
   display: inline-block;
   padding-right: 1em;
 }
-.pricing-list input, label{
+.pricing-form input, label{
   display: block;
+}
+.buy-button{
+  height: 30px;
+  margin: auto 1em auto -4em;
+}
+.store-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.shopping-list-wrapper{
+  margin-left: 3em;
+}
+.basket-total {
+  text-align: right;
+  padding-right: 4em;
+  font-weight: bold;
+  font-size: 30px;
+}
+.basket-buttons {
+  padding-right: 6.5em;
+}
+.basket-buttons button {
+  float: right;
+  margin-right: 1em;
 }
