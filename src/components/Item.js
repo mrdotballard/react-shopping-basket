@@ -18,8 +18,6 @@ class Item extends React.Component {
 
     const index = this.props.index;
 
-    let buyButton = '';
-
     // only displaly buy button on shopping list componenet call
     if (this.props.shoppingList) {
       return (

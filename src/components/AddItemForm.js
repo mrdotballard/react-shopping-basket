@@ -31,7 +31,7 @@ class AddItemForm extends React.Component {
 
     return (
       <div className="pricing-rules">
-        <form onSubmit={this.createRuleItem}> 
+        <form onSubmit={this.createRuleItem}>
           <div className="pricing-form">
             <label htmlFor="name">Item Name</label>
             <input name="name" ref={this.nameRef} type="text" required />
@@ -49,6 +49,10 @@ class AddItemForm extends React.Component {
         </form>
       </div>
     );
+  }
+
+  static propTypes = {
+    addRuleItem: PropTypes.func,
   }
 }
 
